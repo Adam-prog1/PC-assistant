@@ -639,6 +639,18 @@ namespace PC_assistant
             }
         }
 
+        // Код для очистки диска
+        private void RunDiskCleanupButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start("cleanmgr.exe");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка при запуске Очистки диска: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
 
