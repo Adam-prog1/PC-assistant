@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33214.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PC assistant", "PC assistant.csproj", "{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {489F70C8-BAA3-4761-9F49-F1B72A1E1A78}
+	EndGlobalSection
+EndGlobal
