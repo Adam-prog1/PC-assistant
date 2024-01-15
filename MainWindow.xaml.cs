@@ -499,8 +499,6 @@ namespace PC_assistant
         // Обработчик события для установки галочки
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            CheckBox checkBox = (CheckBox)sender;
-
             // Обновляем метку с общим размером
             UpdateTotalSizeLabel();
         }
@@ -508,8 +506,6 @@ namespace PC_assistant
         // Обработчик события для снятия галочки
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            CheckBox checkBox = (CheckBox)sender;
-
             // Обновляем метку с общим размером
             UpdateTotalSizeLabel();
         }
