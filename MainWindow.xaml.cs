@@ -201,44 +201,26 @@ namespace PC_assistant
             }
         }
 
-        // Код для открытия Защита системы с помощью powershell
-        //private void CreateRestorePointButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Process.Start("powershell.exe", $"-NoExit -Command Invoke-Expression 'rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl,3,4'");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Ошибка при открытии окна Защита системы: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-        //    }
-        //}
-
         // Код для Создания точки восстановления с помощью powershell
         private void CreateRestorePointButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Process.Start("powershell.exe", "-NoExit -Command checkpoint-computer -description 'Restore Point created by PC Assistant'");
+                // Создание точки восстановления с помощтю PowerShell
+                //Process.Start("powershell.exe", "-NoExit -Command checkpoint-computer -description 'Restore Point created by PC Assistant'");
+
+                // Открыть окно создание точки восстановления (Защита системы) 
+                Process.Start("control", "sysdm.cpl,,4");
+
+                // Сразу открывает Восстановление системы
+                //Process.Start("rstrui.exe");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при создании точки восстановления: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show($"Ошибка при создании точки восстановления: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка при открытии окна Защита системы: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-        // Код для открытия Защита системы с помощью cmd
-        //private void CreateRestorePointButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    try
-        //    {
-        //        Process.Start("cmd.exe", $"/c start rundll32.exe shell32.dll,Control_RunDLL sysdm.cpl,,4");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Ошибка при открытии окна Защита системы: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-        //    }
-        //}
 
         // Код для добавления корзины на рабочей стол
         private void AddBinToDesktopButton_Click(object sender, RoutedEventArgs e)
