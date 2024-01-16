@@ -4,12 +4,199 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
-        Title="PC Helper" Height="500" Width="850" Background="White" WindowStyle="ThreeDBorderWindow" ResizeMode="CanMinimize">
-    <Grid Background="#ffdadada">
+        Title="PC Helper" Height="500" Width="850"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border CornerRadius="10"                    
+            BorderThickness="1">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
+                <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.5"/>
+                <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--Меню навигации-->
+                <ColumnDefinition Width="250"/>
+                <!--Раздел содержания-->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Меню навигации-->
+            <Border CornerRadius="10,0,0,10"
+                    Grid.Column="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                        <GradientStop Color="{StaticResource secondaryBackColor1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource secondaryBackColor2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <StackPanel>
+
+                    <!--Логотип-->
+                    <StackPanel Orientation="Horizontal"
+                                Height="35"
+                                Margin="15,25,0,40">
+
+                        <!--<Image Source="/Images/Logo.png" Height="30"/>-->
+                        <TextBlock Text="Помошник ПК"
+                                   Foreground="{StaticResource titleColor2}"
+                                   FontSize="20"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0"/>
+                    </StackPanel>
+
+                    <!--Кнопки меню-->
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color1}"
+                                 IsChecked="True"
+                                 Command="{Binding ShowHomeViewCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Главная" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+                    
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color2}"
+                                 Command="{Binding ShowCustomerViewCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Оптимизация" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color2}"
+                                 Command="{Binding ShowCustomerViewCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Обновление" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color2}"
+                                 Command="{Binding ShowCustomerViewCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Приложение" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Style="{StaticResource menuButton}"
+                                 Tag="{StaticResource color2}"
+                                 Command="{Binding ShowCustomerViewCommand}">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <TextBlock Text="Очистка диска" Style="{StaticResource menuButtonText}"/>
+                        </StackPanel>
+                    </RadioButton>
+                </StackPanel>
+            </Border>
+
+            <!--Основной раздел-->
+            <Border CornerRadius="0,10,10,0"
+                    Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                        <GradientStop Color="{StaticResource primaryBackColor1}" Offset="0"/>
+                        <GradientStop Color="{StaticResource primaryBackColor2}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <!--Панель управления-->
+                        <RowDefinition Height="25"/>
+                        <!--Заголовок/Подпись-->
+                        <RowDefinition Height="35"/>
+                        <!--Раздел контента-->
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--Панель управления-->
+                    <StackPanel x:Name="pnlControlBar"
+                                Grid.Row="0"
+                                Orientation="Horizontal"
+                                FlowDirection="RightToLeft"
+                                Background="Transparent"
+                                Margin="0,0,5,0"
+                                MouseLeftButtonDown="PnlControlBar_MouseLeftButtonDown"
+                                MouseEnter="PnlControlBar_MouseEnter">
+
+                        <Button x:Name="btnClose"
+                                Style="{StaticResource controlButton}"
+                                Tag="{StaticResource color4}"
+                                Click="BtnClose_Click">
+                            <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+                        <Button x:Name="btnMaximize"
+                                Style="{StaticResource controlButton}"
+                                Tag="{StaticResource color6}"
+                                Click="BtnMaximize_Click">
+                            <fa:IconImage Icon="Square" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+                        <Button x:Name="btnMinimize"
+                                Style="{StaticResource controlButton}"
+                                Tag="{StaticResource color8}"
+                                Click="BtnMinimize_Click">
+                            <fa:IconImage Icon="WindowMinimize" Width="12" Style="{StaticResource controlButtonIcon}"/>
+                        </Button>
+
+                    </StackPanel>
+
+                    <!--Заголовок-->
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Caption-->
+                        <StackPanel Grid.Column="0"
+                                    Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+                            <fa:IconImage Icon="Home"
+                                          Height="20"
+                                          Width="20"
+                                          Foreground="{StaticResource titleColor2}"
+                                          Margin="35,0,10,0"/>
+
+                            <TextBlock Text="Главная"
+                                       Foreground="{StaticResource titleColor2}"
+                                       FontSize="16"
+                                       FontFamily="Montserrat"
+                                       FontWeight="Medium"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <!--Content section / Child views-->
+                    <ContentControl Content="{Binding CurrentChildView}"
+                                    Grid.Row="2"
+                                    Margin="25"/>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+
+
+
+</Window>
+    
+    <!--<Grid Background="#ffdadada">
         <TabControl TabStripPlacement="Left">
 
-            <!--Главная-->
+            --><!--Главная--><!--
             <TabItem Header="Главная" Background="Black" Margin="5,10,0,0">
                 <StackPanel Background="White" Margin="20 10">
                     <TextBlock x:Name="SystemInfo" FontWeight="Bold" Margin="0,10,0,0" FontSize="16" HorizontalAlignment="Center" Width="420" Height="85"  />
@@ -22,7 +209,7 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Оптимизация -->
+            --><!-- Оптимизация --><!--
             <TabItem Header="Оптимизация" Background="Black" Margin="5,10,0,0">
                 <StackPanel Background="White" Margin="20 10">
                     <TextBlock Text="Внешний вид" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,5,0,0" Width="133" HorizontalAlignment="Center"/>
@@ -33,7 +220,7 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Обновления -->
+            --><!-- Обновления --><!--
             <TabItem Header="Обновления" Background="Black" Margin="5,10,0,0">
                 <StackPanel Background="White" Margin="20 10">
                     <Button Content="Отключить автообновления" Click="DisableWindowsUpdateButton_Click" Margin="112,20,112,10" Width="240"/>
@@ -41,7 +228,7 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Программы -->
+            --><!-- Программы --><!--
             <TabItem Header="Программы" Background="Black" Margin="5,10,0,0">
                 <StackPanel Background="White" Margin="20 10">
                     <Button Content="Посмотреть установленные программы" Click="GetInstalledPrograms_Click" Margin="122,20,122,10" Width="300"/>
@@ -55,7 +242,7 @@
                 </StackPanel>
             </TabItem>
 
-            <!-- Очистка диска -->
+            --><!-- Очистка диска --><!--
             <TabItem Header="Очистка диска" Background="Black" Margin="5,10,0,0">
                 <StackPanel Background="White" Margin="20 10">
                     <TextBlock Text="Список временных вайлов" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,5,0,0" Width="270" HorizontalAlignment="Center"/>
@@ -78,5 +265,5 @@
 
 
         </TabControl>
-    </Grid>
-</Window>
+    </Grid>-->
+
