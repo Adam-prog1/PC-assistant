@@ -14,7 +14,7 @@
                 <StackPanel Background="White" Margin="20 10">
                     <TextBlock x:Name="SystemInfo" FontWeight="Bold" Margin="0,10,0,0" FontSize="16" HorizontalAlignment="Center" Width="420" Height="85"  />
 
-                    <Button Content="Узнать ключ активации Windows" Click="ActivationKeyButton_Click" Margin="106,20,106,10" Width="340" HorizontalAlignment="Center"/>
+                    <Button Content="Узнать ключ активации Windows" Click="ActivationKeyButton_Click" Margin="106,20,106,10" Width="340" HorizontalAlignment="Center" Background="#FF673AB7"/>
                     <Button Content="Расширенные сведения о системе" Click="AdvancedSystemInfoButton_Click" Margin="106,0,106,10" Width="340" HorizontalAlignment="Center"/>
                     <Button Content="Создать точку восстановления" Click="CreateRestorePointButton_Click" Margin="106,0,106,10" Width="340" HorizontalAlignment="Center"/>
 
@@ -66,7 +66,7 @@
                         <Button Content="Снять выбор" Click="DeselectAllButton_Click" Width="Auto" Margin="0,0,22,0"/>
                         <Button Content="Выбрать все" Click="SelectAllButton_Click" Width="Auto" Margin="0,0,0,0"/>
                         <Button Content="Обновить" Click="UpdateDiskCleanupListButton_Click" Width="Auto" Margin="22,0,0,0"/>
-                        
+
                     </StackPanel>
                     <Label x:Name="TotalSizeLabel" Content="" Margin="24,0,176,0" FontSize="16" FontWeight="Bold" />
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="5">
