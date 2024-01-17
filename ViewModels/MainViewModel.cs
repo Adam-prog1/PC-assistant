@@ -60,7 +60,10 @@ namespace PC_assistant.ViewModels
         //--> Commands
         public ICommand ShowHomeViewCommand { get; }
         public ICommand ShowOptimizationViewCommand { get; }
+        public ICommand ShowUpdatesViewCommand { get; }
+        public ICommand ShowProgramsViewCommand { get; }
         public ICommand ShowDiskCleanupViewCommand { get; }
+        
 
         public MainViewModel()
         {
@@ -68,10 +71,12 @@ namespace PC_assistant.ViewModels
             //Initialize commands
             ShowHomeViewCommand = new ViewModelCommand(ExecuteShowHomeViewCommand);
             ShowOptimizationViewCommand = new ViewModelCommand(ExecuteShowOptimizationViewCommand);
+            ShowUpdatesViewCommand = new ViewModelCommand(ExecuteShowUpdatesViewCommand);
+            ShowProgramsViewCommand = new ViewModelCommand(ExecuteShowProgramsViewCommand);
             ShowDiskCleanupViewCommand = new ViewModelCommand(ExecuteShowDiskCleanupViewCommand);
 
             //Default view
-            ExecuteShowDiskCleanupViewCommand(null);
+            ExecuteShowHomeViewCommand(null);
         }
 
         private void ExecuteShowHomeViewCommand(object obj)
@@ -84,7 +89,21 @@ namespace PC_assistant.ViewModels
         private void ExecuteShowOptimizationViewCommand(object obj)
         {
             CurrentChildView = new OptimizationViewModel();
-            Caption = "Optimization";
+            Caption = "Оптимизация";
+            Icon = IconChar.UserGroup;
+        }
+
+        private void ExecuteShowUpdatesViewCommand(object obj)
+        {
+            CurrentChildView = new UpdatesViewModel();
+            Caption = "Обновления";
+            Icon = IconChar.Home;
+        }
+
+        private void ExecuteShowProgramsViewCommand(object obj)
+        {
+            CurrentChildView = new ProgramsViewModel();
+            Caption = "Программы";
             Icon = IconChar.UserGroup;
         }
 
