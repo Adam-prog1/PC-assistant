@@ -8,7 +8,7 @@
         xmlns:viewmodel="clr-namespace:PC_assistant.ViewModels"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" xmlns:local1="clr-namespace:PC_assistant.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Background="Transparent"
@@ -77,7 +77,7 @@
                                 Margin="15,25,0,40">
 
                         <!--<Image Source="/Images/Logo.png" Height="30"/>-->
-                        <TextBlock Text="RJ CODE"
+                        <TextBlock Text="PC_Assistant"
                                    Foreground="{StaticResource titleColor2}"
                                    FontSize="20"
                                    FontFamily="Montserrat"

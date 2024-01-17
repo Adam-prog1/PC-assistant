@@ -11,13 +11,11 @@
                 Padding="10">
 
         <StackPanel Margin="5 1">
-            <TextBlock x:Name="SystemInfo" Background="WhiteSmoke" FontWeight="Bold" Margin="0,10,0,0" FontSize="16" HorizontalAlignment="Center" Width="420" Height="85"  Foreground="#D5CFF5"/>
+            <TextBlock x:Name="SystemInfo" Background="WhiteSmoke" FontWeight="Bold" Margin="0,10,0,0" FontSize="16" HorizontalAlignment="Center" Width="430" Height="85"  Foreground="Black"/>
 
-            <!--<Button Content="Узнать ключ активации Windows" Click="ActivationKeyButton_Click" Margin="106,20,106,10" Width="340" HorizontalAlignment="Center" Background="#FF673AB7"/>
+            <Button Content="Узнать ключ активации Windows" Click="ActivationKeyButton_Click" Margin="106,20,106,10" Width="340" HorizontalAlignment="Center" Background="#FF673AB7"/>
             <Button Content="Расширенные сведения о системе" Click="AdvancedSystemInfoButton_Click" Margin="106,0,106,10" Width="340" HorizontalAlignment="Center"/>
             <Button Content="Создать точку восстановления" Click="CreateRestorePointButton_Click" Margin="106,0,106,10" Width="340" HorizontalAlignment="Center"/>
-
-            <Button Content="О программе" Click="AboutButton_Click" DockPanel.Dock="Bottom" Margin="10 80" HorizontalAlignment="Right"/>-->
         </StackPanel>
 
     </Border>
