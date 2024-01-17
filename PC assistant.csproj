@@ -90,6 +90,7 @@
     <Compile Include="ViewModels\ProgramsViewModel.cs" />
     <Compile Include="ViewModels\UpdatesViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ViewModelCommand.cs" />
     <Compile Include="Views\DiskCleanupView.xaml.cs">
       <DependentUpon>DiskCleanupView.xaml</DependentUpon>
     </Compile>
