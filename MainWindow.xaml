@@ -21,6 +21,22 @@
 
     <Window.Resources>
 
+        <DataTemplate DataType="{x:Type viewmodel:HomeViewModel}">
+            <local:HomeView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:OptimizationViewModel}">
+            <local:OptimizationView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:UpdatesViewModel}">
+            <local:UpdatesView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodel:ProgramsViewModel}">
+            <local:ProgramsView/>
+        </DataTemplate>
+
         <DataTemplate DataType="{x:Type viewmodel:DiskCleanupViewModel}">
             <local:DiskCleanupView/>
         </DataTemplate>

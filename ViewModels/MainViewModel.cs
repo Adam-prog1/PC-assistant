@@ -79,6 +79,7 @@ namespace PC_assistant.ViewModels
             ExecuteShowHomeViewCommand(null);
         }
 
+        // Home
         private void ExecuteShowHomeViewCommand(object obj)
         {
             CurrentChildView = new HomeViewModel();
@@ -86,6 +87,7 @@ namespace PC_assistant.ViewModels
             Icon = IconChar.Home;
         }
 
+        // Оптимизация
         private void ExecuteShowOptimizationViewCommand(object obj)
         {
             CurrentChildView = new OptimizationViewModel();
@@ -93,13 +95,15 @@ namespace PC_assistant.ViewModels
             Icon = IconChar.UserGroup;
         }
 
+        // Обновления
         private void ExecuteShowUpdatesViewCommand(object obj)
         {
             CurrentChildView = new UpdatesViewModel();
             Caption = "Обновления";
-            Icon = IconChar.Home;
+            Icon = IconChar.UserGroup;
         }
 
+        // Программы
         private void ExecuteShowProgramsViewCommand(object obj)
         {
             CurrentChildView = new ProgramsViewModel();
@@ -107,11 +111,12 @@ namespace PC_assistant.ViewModels
             Icon = IconChar.UserGroup;
         }
 
+        // Очистка диска
         private void ExecuteShowDiskCleanupViewCommand(object obj)
         {
             CurrentChildView = new DiskCleanupViewModel();
             Caption = "Очистка диска";
-            Icon = IconChar.Home;
+            Icon = IconChar.UserGroup;
         }
     }
 }
