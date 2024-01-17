@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace PC_assistant.Views
 {
     /// <summary>
-    /// Логика взаимодействия для MainView.xaml
+    /// Логика взаимодействия для HomeView.xaml
     /// </summary>
-    public partial class MainView : UserControl
+    public partial class HomeView : UserControl
     {
-        public MainView()
+        public HomeView()
         {
             InitializeComponent();
         }
