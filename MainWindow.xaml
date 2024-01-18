@@ -77,6 +77,11 @@
                                 Margin="15,25,0,40">
 
                         <!--<Image Source="/Images/Logo.png" Height="30"/>-->
+                        <fa:IconImage Icon="Keyboard"
+                                      Tag="{StaticResource color1}"
+                                      Height="30" Width="35"
+                                      Margin="5,0,0,0" 
+                                      VerticalAlignment="Center"/>
                         <TextBlock Text="PC_Assistant"
                                    Foreground="{StaticResource titleColor2}"
                                    FontSize="20"
@@ -98,37 +103,37 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color2}"
+                                     Tag="{StaticResource color8}"
                                      Command="{Binding ShowOptimizationViewCommand}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <fa:IconImage Icon="Desktop" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Оптимизация" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color2}"
+                                     Tag="{StaticResource color3}"
                                      Command="{Binding ShowUpdatesViewCommand}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <fa:IconImage Icon="CloudArrowUp" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Обновление" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color2}"
+                                     Tag="{StaticResource color5}"
                                      Command="{Binding ShowProgramsViewCommand}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <fa:IconImage Icon="Briefcase" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Программы" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color2}"
+                                     Tag="{StaticResource color4}"
                                      Command="{Binding ShowDiskCleanupViewCommand}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:IconImage Icon="UserGroup" Style="{StaticResource menuButtonIcon}"/>
+                            <fa:IconImage Icon="TrashCan" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Очистка диска" Style="{StaticResource menuButtonText}"/>
                         </StackPanel>
                     </RadioButton>
