@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Management;
 using System.Windows;
 using System.Windows.Controls;
+using PC_assistant.ViewModels;
 
 
 namespace PC_assistant.Views
