@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Management;
 using System.Windows;
@@ -9,28 +10,48 @@ namespace PC_assistant.ViewModels
 {
     public class HomeViewModel : ViewModelBase
     {
-        public HomeViewModel()
-        {
+        private string _systemInfo;
 
-            // Заполняем список характеристик при инициализации окна
-            Loaded += MainWindow_Loaded;
+        public string SystemInfo
+        {
+            get { return _systemInfo; }
+            set
+            {
+                if (_systemInfo != value)
+                {
+                    _systemInfo = value;
+                    OnPropertyChanged(nameof(SystemInfo));
+                }
+            }
         }
 
-
-        // Код для вывода характеристик
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        public HomeViewModel()
         {
-            // Получение и отображение характеристик компьютера
+            // Заполняем список характеристик при инициализации
+            PopulateSystemInfo();
+
+            // Добавляем обработчик события PropertyChanged из базового класса
+            PropertyChanged += HandlePropertyChanged;
+        }
+
+        private void HandlePropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            // Обработка изменений свойств
+        }
+
+        // Логика получения информации о системе и её вывод
+        private void PopulateSystemInfo()
+        {
             string processorInfo = GetProcessorInfo();
             string ramInfo = GetRAMInfo();
             string biosYearInfo = GetBiosYearInfo();
             string osInfo = GetOSInfo();
 
-            // Форматирование строки и установка текста с символами новой строки
-            SystemInfo.Text = $"Процессор: {processorInfo}\nОперативная память: {ramInfo}\nГод выпуска BIOS: {biosYearInfo}\nТекущая ОС: {osInfo}";
+            // Форматирование строки и установка текста
+            SystemInfo = $"Процессор: {processorInfo}\nОперативная память: {ramInfo}\nГод выпуска BIOS: {biosYearInfo}\nТекущая ОС: {osInfo}";
         }
 
-        // Код для вывода характеристик процессора
+        // Логика для получения характеристик процессора
         private string GetProcessorInfo()
         {
             try
@@ -49,9 +70,9 @@ namespace PC_assistant.ViewModels
             return "Информация о процессоре недоступна.";
         }
 
-        // Код для вывода характеристик ОЗУ
+        // Логика для получения характеристик ОЗУ
         private string GetRAMInfo()
-        {
+        {          
             try
             {
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_ComputerSystem");
@@ -69,7 +90,7 @@ namespace PC_assistant.ViewModels
             return "Информация об оперативной памяти недоступна.";
         }
 
-        // Код для вывода характеристик BIOS
+        // Логика для получения характеристик BIOS
         private string GetBiosYearInfo()
         {
             try
@@ -88,7 +109,7 @@ namespace PC_assistant.ViewModels
             return "Информация о годе выпуска BIOS недоступна.";
         }
 
-        // Код для вывода версии Windows
+        // Логика для получения информации об ОС
         private string GetOSInfo()
         {
             string osVersion = Environment.OSVersion.Version.ToString();
@@ -97,12 +118,6 @@ namespace PC_assistant.ViewModels
 
             return $"{osDescription} {osVersion} build {osBuild}";
         }
-
-
-
-
-
-
 
     }
 }
