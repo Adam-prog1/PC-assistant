@@ -15,8 +15,8 @@
 
             <TextBlock Text="Обновления" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,5,0,0" Width="133" HorizontalAlignment="Center" Foreground="#D5CFF5"/>
 
-            <!--<Button Content="Отключить автообновления" Click="DisableWindowsUpdateButton_Click" Margin="112,20,112,10" Width="240"/>
-            <Button Content="Включить автообновления" Click="EnableWindowsUpdateButton_Click" Margin="112,0,112,10" Width="240"/>-->
+            <Button Content="Отключить автообновления" Click="DisableWindowsUpdateButton_Click" Margin="112,20,112,10" Width="240"/>
+            <Button Content="Включить автообновления" Click="EnableWindowsUpdateButton_Click" Margin="112,0,112,10" Width="240"/>
             
         </StackPanel>
 
