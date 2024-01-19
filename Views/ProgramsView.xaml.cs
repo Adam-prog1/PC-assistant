@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using PC_assistant.ViewModels;
 
 namespace PC_assistant.Views
 {
@@ -20,9 +11,50 @@ namespace PC_assistant.Views
     /// </summary>
     public partial class ProgramsView : UserControl
     {
+        private ProgramsViewModel viewModel;
+
         public ProgramsView()
         {
             InitializeComponent();
+            viewModel = new ProgramsViewModel();
+            DataContext = viewModel;
+        }
+
+        private void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
+        {
+            viewModel.GetInstalledPrograms(null);
+        }
+
+        // Код для открытия окна "Программы и компоненты"
+        private void UninstallProgram_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start("appwiz.cpl");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        // Код для обновления списка установленных программ
+        private void UpdateProgram_Click(object sender, RoutedEventArgs e)
+        {
+            viewModel.UpdateProgramsList(null); // null передается вместо параметра
+        }
+
+        // Код для Автозапуска программ
+        private void OpenStartupAppsSettings_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process.Start("ms-settings:");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
