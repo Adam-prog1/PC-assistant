@@ -21,5 +21,6 @@ namespace PC_assistant.ViewModels
 {
     public class OptimizationViewModel : ViewModelBase
     {
+
     }
 }

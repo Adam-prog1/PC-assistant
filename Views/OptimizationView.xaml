@@ -12,10 +12,10 @@
 
         <StackPanel Margin="5 1">
             <TextBlock Text="Внешний вид" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Margin="0,5,0,0" Width="133" HorizontalAlignment="Center" Foreground="#D5CFF5"/>
-            <!--<Button Content="Добавить &quot;Корзину&quot; на рабочий стол" Click="AddBinToDesktopButton_Click" Margin="106,20,106,10" Width="340"/>
+            <Button Content="Добавить &quot;Корзину&quot; на рабочий стол" Click="AddBinToDesktopButton_Click" Margin="106,20,106,10" Width="340"/>
             <Button Content="Добавить &quot;Этот компьютер&quot; на рабочий стол" Click="AddComputerToDesktopButton_Click" Margin="106,0,106,10" Width="340"/>
             <Button Content="Добавить секунды в часы Windows" Click="AddSecondsToClock_Click" Margin="106,0,106,10" Width="340"/>
-            <Button Content="Параметры значков рабочего стола" Click="DesktopIconSettingsButton_Click" Margin="106,0,106,10" Width="340"/>-->
+            <Button Content="Параметры значков рабочего стола" Click="DesktopIconSettingsButton_Click" Margin="106,0,106,10" Width="340"/>
         </StackPanel>
 
     </Border>

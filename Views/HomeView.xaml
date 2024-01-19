@@ -11,7 +11,7 @@
                 CornerRadius="10" 
                 Padding="10">
 
-        <StackPanel Margin="5 1">
+        <StackPanel>
             <TextBlock x:Name="SystemInfo" Text="{Binding SystemInfo}" Background="WhiteSmoke" FontWeight="Bold" Margin="0,10,0,0" FontSize="16" HorizontalAlignment="Center" Width="430" Height="85"  Foreground="Black"/>
 
             <Button Content="Узнать ключ активации Windows" Click="ActivationKeyButton_Click" Margin="106,20,106,10" Width="340" HorizontalAlignment="Center" Background="#FF673AB7"/>

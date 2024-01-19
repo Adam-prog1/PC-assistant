@@ -348,13 +348,6 @@ namespace PC_assistant
         //    }
         //}
 
-        //// Кнопка "О программе"
-        //private void AboutButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    AboutWindow aboutWindow = new AboutWindow();
-        //    aboutWindow.ShowDialog();
-        //}
-
         //// Код для отключения обновлений
         //private void DisableWindowsUpdateButton_Click(object sender, RoutedEventArgs e)
         //{
