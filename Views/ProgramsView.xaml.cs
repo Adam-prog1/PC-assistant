@@ -38,12 +38,6 @@ namespace PC_assistant.Views
             }
         }
 
-        // Код для обновления списка установленных программ
-        private void UpdateProgram_Click(object sender, RoutedEventArgs e)
-        {
-            viewModel.UpdateProgramsList(null); // null передается вместо параметра
-        }
-
         // Код для Автозапуска программ
         private void OpenStartupAppsSettings_Click(object sender, RoutedEventArgs e)
         {
