@@ -219,7 +219,7 @@
                     <!--Раздел контента-->
                     <ContentControl Content="{Binding CurrentChildView}"
                                     Grid.Row="2"
-                                    Margin="25"/>
+                                    Margin="20"/>
 
                 </Grid>
             </Border>

@@ -24,12 +24,6 @@
 
             <StackPanel Width="340">
 
-                <!--<Button Content="Узнать ключ активации Windows" 
-                        Click="ActivationKeyButton_Click" 
-                        Margin="106,0,106,10" Width="340" 
-                        HorizontalAlignment="Center" 
-                        Background="#FF673AB7"/>-->
-
                 <Button     Click="ActivationKeyButton_Click"                            
                             Content="Узнать ключ активации Windows"                            
                             FontSize="12"
@@ -39,7 +33,7 @@
                             Foreground="White">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Background" Value="#773DFF"/>
+                            <Setter Property="Background" Value="#FF673AB7"/>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
@@ -54,7 +48,7 @@
                             </Setter>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#836EFB"/>
+                                    <Setter Property="Background" Value="#773DFF"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -75,7 +69,7 @@
                             Foreground="White">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Background" Value="#773DFF"/>
+                            <Setter Property="Background" Value="#FF673AB7"/>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
@@ -91,7 +85,7 @@
                             </Setter>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#836EFB"/>
+                                    <Setter Property="Background" Value="#773DFF"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>
@@ -112,7 +106,7 @@
                             Foreground="White">
                     <Button.Style>
                         <Style TargetType="Button">
-                            <Setter Property="Background" Value="#773DFF"/>
+                            <Setter Property="Background" Value="#FF673AB7"/>
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="Button">
@@ -127,7 +121,7 @@
                             </Setter>
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#836EFB"/>
+                                    <Setter Property="Background" Value="#773DFF"/>
                                 </Trigger>
                             </Style.Triggers>
                         </Style>

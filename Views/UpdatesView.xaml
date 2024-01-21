@@ -6,14 +6,18 @@
              xmlns:local="clr-namespace:PC_assistant.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
+
     <Border     Background="#200F53"
                 CornerRadius="10" 
                 Padding="10">
 
         <StackPanel>
-
-            <TextBlock Text="Обновления" FontSize="20" FontWeight="Bold" TextDecorations="Underline" Width="133" HorizontalAlignment="Center" Foreground="#D5CFF5"/>
+            <TextBlock Text="Обновления" 
+                       FontSize="20" FontWeight="Bold" 
+                       TextDecorations="Underline" 
+                       Width="125" 
+                       HorizontalAlignment="Center" 
+                       Foreground="#D5CFF5"/>
 
             <StackPanel Width="340">
 
