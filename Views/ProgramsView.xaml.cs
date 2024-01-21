@@ -20,10 +20,16 @@ namespace PC_assistant.Views
             DataContext = viewModel;
         }
 
-        private void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
+        private async void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.GetInstalledPrograms(null);
+            await viewModel.GetInstalledProgramsAsync();
         }
+
+
+        //private void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
+        //{
+        //    viewModel.GetInstalledPrograms(null);
+        //}
 
         // Код для открытия окна "Программы и компоненты"
         private void UninstallProgram_Click(object sender, RoutedEventArgs e)
