@@ -43,7 +43,7 @@ namespace PC_assistant.Views
         {
             try
             {
-                Process.Start("ms-settings:");
+                Process.Start("ms-settings:startupapps");
             }
             catch (Exception ex)
             {

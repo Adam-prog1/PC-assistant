@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
+using PC_assistant.ViewModels;
 
 namespace PC_assistant.Views
 {
@@ -157,7 +158,7 @@ namespace PC_assistant.Views
             }
         }
 
-        // Обработчик события для кнопки "Удалить выбранные" с пропуском вайлов используемых в других процессах
+        // Обработчик события для кнопки "Удалить выбранные" с пропуском файлов используемых в других процессах
         //private void DeleteSelectedButton_Click(object sender, RoutedEventArgs e)
         //{
         //    try
