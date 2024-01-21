@@ -103,8 +103,8 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color8}"
-                                     Command="{Binding ShowOptimizationViewCommand}">
+                                 Tag="{StaticResource color8}"
+                                 Command="{Binding ShowOptimizationViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Desktop" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Оптимизация" Style="{StaticResource menuButtonText}"/>
@@ -112,8 +112,8 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color3}"
-                                     Command="{Binding ShowUpdatesViewCommand}">
+                                 Tag="{StaticResource color3}"
+                                 Command="{Binding ShowUpdatesViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="CloudArrowUp" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Обновление" Style="{StaticResource menuButtonText}"/>
@@ -121,8 +121,8 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color5}"
-                                     Command="{Binding ShowProgramsViewCommand}">
+                                 Tag="{StaticResource color5}"
+                                 Command="{Binding ShowProgramsViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="Briefcase" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Программы" Style="{StaticResource menuButtonText}"/>
@@ -130,8 +130,8 @@
                     </RadioButton>
 
                     <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="{StaticResource color4}"
-                                     Command="{Binding ShowDiskCleanupViewCommand}">
+                                 Tag="{StaticResource color4}"
+                                 Command="{Binding ShowDiskCleanupViewCommand}">
                         <StackPanel Orientation="Horizontal">
                             <fa:IconImage Icon="TrashCan" Style="{StaticResource menuButtonIcon}"/>
                             <TextBlock Text="Очистка диска" Style="{StaticResource menuButtonText}"/>
@@ -216,7 +216,7 @@
                         </StackPanel>
                     </Grid>
 
-                    <!--Content section / Child views-->
+                    <!--Раздел контента-->
                     <ContentControl Content="{Binding CurrentChildView}"
                                     Grid.Row="2"
                                     Margin="25"/>

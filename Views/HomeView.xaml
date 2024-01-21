@@ -12,31 +12,129 @@
                 Padding="10">
 
         <StackPanel>
+            
             <TextBlock x:Name="SystemInfo" 
                        Text="{Binding SystemInfo}" 
                        Background="#7C80C2" 
                        FontWeight="Bold" 
                        FontSize="16" 
                        HorizontalAlignment="Center" 
-                       Width="500" Height="90"/>
+                       Width="500" Height="90"
+                       Margin="0,0,0,20"/>
 
-            <Button Content="Узнать ключ активации Windows" 
-                    Click="ActivationKeyButton_Click" 
-                    Margin="106,20,106,10" Width="340" 
-                    HorizontalAlignment="Center" 
-                    Background="#FF673AB7"/>
-            
-            <Button Content="Расширенные сведения о системе" 
-                    Click="AdvancedSystemInfoButton_Click" 
-                    Margin="106,0,106,10" Width="340" 
-                    HorizontalAlignment="Center"/>
-            
-            <Button Content="Создать точку восстановления" 
-                    Click="CreateRestorePointButton_Click" 
-                    Margin="106,0,106,10" Width="340" 
-                    HorizontalAlignment="Center"/>
-            
-            
+            <StackPanel Width="340">
+
+                <!--<Button Content="Узнать ключ активации Windows" 
+                        Click="ActivationKeyButton_Click" 
+                        Margin="106,0,106,10" Width="340" 
+                        HorizontalAlignment="Center" 
+                        Background="#FF673AB7"/>-->
+
+                <Button     Click="ActivationKeyButton_Click"                            
+                            Content="Узнать ключ активации Windows"                            
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#773DFF"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#836EFB"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <!--<Button Content="Расширенные сведения о системе" 
+                        Click="AdvancedSystemInfoButton_Click" 
+                        Margin="106,0,106,10" Width="340" 
+                        HorizontalAlignment="Center"/>-->
+
+                <Button     Click="AdvancedSystemInfoButton_Click"                            
+                            Content="Расширенные сведения о системе"                            
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#773DFF"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    Margin="0,10,0,10"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#836EFB"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <!--<Button Content="Создать точку восстановления" 
+                        Click="CreateRestorePointButton_Click" 
+                        Margin="106,0,106,10" Width="340" 
+                        HorizontalAlignment="Center"/>-->
+
+                <Button     Click="CreateRestorePointButton_Click"                            
+                            Content="Создать точку восстановления"                            
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#773DFF"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                                      HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#836EFB"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+            </StackPanel>
             
         </StackPanel>
 
