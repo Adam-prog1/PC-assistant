@@ -12,7 +12,7 @@
                 Padding="10">
 
         <StackPanel>
-            <TextBlock Text="Список временных вайлов" 
+            <TextBlock Text="Список временных файлов" 
                        FontSize="20" FontWeight="Bold" 
                        TextDecorations="Underline" 
                        Width="270" 
@@ -23,30 +23,138 @@
                      SelectionMode="Multiple"
                      Background="#7C80C2" 
                      Width="500" Height="250" 
-                     Margin="0,10,0,10" 
-                     BorderBrush="#9497CD" 
-                     BorderThickness="1"/>
+                     Margin="0,10,0,20"/>
 
-            <StackPanel Orientation="Horizontal" 
-                        HorizontalAlignment="Center" 
-                        Margin="20,10,20,0" Height="40">
+            <StackPanel Width="710" Orientation="Horizontal">
+                <Button     Click="DeleteSelectedButton_Click"                            
+                            Content="Удалить выбранные"                            
+                            FontSize="14" FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White"
+                            Width="170">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF673AB7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#773DFF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
-                <Button HorizontalAlignment="Left" 
-                        Content="Удалить выбранные" 
-                        Click="DeleteSelectedButton_Click" 
-                        Width="Auto" Margin="0,0,22,0"/>
+                <Button     Click="DeselectAllButton_Click"                            
+                            Content="Снять выбор"                            
+                            FontSize="14" FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White"
+                            Width="170"
+                            Margin="10 0 10 0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF673AB7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#773DFF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
-                <Button Content="Снять выбор" 
-                        Click="DeselectAllButton_Click" 
-                        Width="Auto" Margin="0,0,22,0"/>
+                <Button     Click="SelectAllButton_Click"                            
+                            Content="Выбрать все"                            
+                            FontSize="14" FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White"
+                            Width="170">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF673AB7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#773DFF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
-                <Button Content="Выбрать все" 
-                        Click="SelectAllButton_Click" 
-                        Width="Auto" Margin="0,0,0,0"/>
-
-                <Button Content="Обновить" 
-                        Click="UpdateDiskCleanupListButton_Click" 
-                        Width="Auto" Margin="22,0,0,0"/>
+                <Button     Click="UpdateDiskCleanupListButton_Click"                            
+                            Content="Обновить"                            
+                            FontSize="14" FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White"
+                            Width="170"
+                            Margin="10 0 0 0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF673AB7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#773DFF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
             </StackPanel>
 
             <Label x:Name="TotalSizeLabel" 
@@ -56,21 +164,73 @@
                    Margin="20,0,0,0" 
                    FontSize="16" FontWeight="Bold" Foreground="#D5CFF5"/>
 
-            <StackPanel HorizontalAlignment="Center" 
-                        Orientation="Horizontal" 
-                        Margin="5">
+            <StackPanel Width="350" Orientation="Horizontal">
+                <Button     Click="OptimizeDrives_Click"                            
+                            Content="Оптимизация дисков"                            
+                            FontSize="14" FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White"
+                            Width="170">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF673AB7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#773DFF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
 
-                <Button Content="Оптимизация дисков" 
-                        Click="OptimizeDrives_Click" 
-                        Margin="0,0,10,0" Width="240" 
-                        HorizontalAlignment="Center"/>
-
-                <Button Content="Очистка диска" 
-                        Click="RunDiskCleanupButton_Click" 
-                        Margin="0,0,0,0" Width="240"/>
-
+                <Button     Click="RunDiskCleanupButton_Click"                            
+                            Content="Очистка диска"                            
+                            FontSize="14" FontWeight="Bold"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            BorderThickness="0"
+                            Foreground="White"
+                            Width="170"
+                            Margin="10 0 0 0">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FF673AB7"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Height="30"
+                                                    CornerRadius="15"
+                                                    Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"
+                                                              HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#773DFF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
             </StackPanel>
-                        
+          
         </StackPanel>
     </Border>
 </UserControl>

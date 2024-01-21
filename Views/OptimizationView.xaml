@@ -22,7 +22,7 @@
 
                 <Button     Click="AddBinToDesktopButton_Click"                            
                             Content="Добавить &quot;Корзину&quot; на рабочий стол"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -53,7 +53,7 @@
 
                 <Button     Click="AddComputerToDesktopButton_Click"                            
                             Content="Добавить &quot;Этот компьютер&quot; на рабочий стол"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -85,7 +85,7 @@
 
                 <Button     Click="DesktopIconSettingsButton_Click"                            
                             Content="Параметры значков рабочего стола"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -116,7 +116,7 @@
 
                 <Button     Click="AddSecondsToClock_Click"                            
                             Content="Добавить секунды в часы Windows"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"

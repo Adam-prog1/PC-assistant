@@ -23,7 +23,7 @@
 
                 <Button     Click="DisableWindowsUpdateButton_Click"                            
                             Content="Отключить автообновления"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -55,7 +55,7 @@
 
                 <Button     Click="EnableWindowsUpdateButton_Click"                            
                             Content="Включить автообновления"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"

@@ -17,7 +17,7 @@
             <StackPanel Width="340">
                 <Button     Command="{Binding GetInstalledProgramsCommand}"                            
                             Content="Посмотреть установленные программы"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -58,7 +58,7 @@
             <StackPanel Width="690" Orientation="Horizontal">
                 <Button     Click="UninstallProgram_Click"                            
                             Content="Удаление программ"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -90,7 +90,7 @@
 
                 <Button     Click="OpenStartupAppsSettings_Click"                            
                             Content="Автозагрузка приложений"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"

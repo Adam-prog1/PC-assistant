@@ -26,7 +26,7 @@
 
                 <Button     Click="ActivationKeyButton_Click"                            
                             Content="Узнать ключ активации Windows"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -55,14 +55,9 @@
                     </Button.Style>
                 </Button>
 
-                <!--<Button Content="Расширенные сведения о системе" 
-                        Click="AdvancedSystemInfoButton_Click" 
-                        Margin="106,0,106,10" Width="340" 
-                        HorizontalAlignment="Center"/>-->
-
                 <Button     Click="AdvancedSystemInfoButton_Click"                            
                             Content="Расширенные сведения о системе"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"
@@ -92,14 +87,9 @@
                     </Button.Style>
                 </Button>
 
-                <!--<Button Content="Создать точку восстановления" 
-                        Click="CreateRestorePointButton_Click" 
-                        Margin="106,0,106,10" Width="340" 
-                        HorizontalAlignment="Center"/>-->
-
                 <Button     Click="CreateRestorePointButton_Click"                            
                             Content="Создать точку восстановления"                            
-                            FontSize="12"
+                            FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             BorderThickness="0"

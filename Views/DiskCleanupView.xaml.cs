@@ -18,14 +18,14 @@ namespace PC_assistant.Views
         {
             InitializeComponent();
 
-            // Заполняем список кеш-файлов и временных файлов при инициализации окна
+            // Заполняем список временных файлов при инициализации окна
             PopulateDiskCleanupList();
         }
 
         // Очистка диска
         private void PopulateDiskCleanupList()
         {
-            // Указываем путь к временным файлам и кешу на диске C:
+            // Указываем путь к временным файлам на диске C:
             string tempFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Temp");
             string windowsTempFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Temp");
 
@@ -94,7 +94,7 @@ namespace PC_assistant.Views
         // Метод для получения размера всех файлов
         private long GetTotalFileSize()
         {
-            // Указываем путь к временным файлам и кешу на диске C:
+            // Указываем путь к временным файлам на диске C:
             string tempFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Temp");
             string windowsTempFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Temp");
 

@@ -7,7 +7,7 @@
         xmlns:viewmodel="clr-namespace:PC_assistant.ViewModels"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" xmlns:local1="clr-namespace:PC_assistant.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="1000"
+        Title="MainWindow" Height="550" Width="1030"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Background="Transparent"
