@@ -20,12 +20,13 @@ namespace PC_assistant.Views
             DataContext = viewModel;
         }
 
+        // С асинхроном
         private async void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
         {
             await viewModel.GetInstalledProgramsAsync();
         }
 
-
+        // Без асинхрона
         //private void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
         //{
         //    viewModel.GetInstalledPrograms(null);

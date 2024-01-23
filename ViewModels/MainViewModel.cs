@@ -1,5 +1,4 @@
 ﻿// MainViewModel.cs
-
 using FontAwesome.Sharp;
 using System.Windows.Input;
 
