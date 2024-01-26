@@ -115,7 +115,7 @@
                 </Button>
 
                 <Button     Click="AddSecondsToClock_Click"                            
-                            Content="Добавить секунды в часы Windows"                            
+                            Content="Настройки даты и времени"                            
                             FontSize="14" FontWeight="Bold"
                             FontFamily="Montserrat"
                             Cursor="Hand"

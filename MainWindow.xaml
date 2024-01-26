@@ -82,6 +82,7 @@
                                       Height="30" Width="35"
                                       Margin="5,0,0,0" 
                                       VerticalAlignment="Center"/>
+                        
                         <TextBlock Text="PC_Assistant"
                                    Foreground="{StaticResource titleColor2}"
                                    FontSize="20"

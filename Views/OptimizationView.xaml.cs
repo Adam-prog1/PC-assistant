@@ -70,19 +70,16 @@ namespace PC_assistant.Views
         // Создание ярлыка для "Мой компьютер" и "Корзина"
         private void CreateShortcut(string shortcutPath, string targetPath)
         {
-            // Создание ярлыка
             WshShell shell = new WshShell();
             IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutPath);
             shortcut.TargetPath = targetPath;
             shortcut.Save();
         }
 
-        // Код для добавления секунд в часы Windows
+        // Код для настройки даты и времени
         private void AddSecondsToClock_Click(object sender, RoutedEventArgs e)
         {
-            // Ваш код для добавления секунд в часы Windows
             Process.Start("control", "timedate.cpl");
-            MessageBox.Show("Добавлены секунды в часы Windows. Пожалуйста, настройте отображение времени в окне \"Дата и время\".");
         }
 
         // Код для открытия параметров значков рабочего стола
@@ -90,7 +87,6 @@ namespace PC_assistant.Views
         {
             try
             {
-                // Запускаем команду для открытия параметров значков рабочего стола
                 Process.Start("control", "desk.cpl,,0");
             }
             catch (Exception ex)
