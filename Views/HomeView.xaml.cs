@@ -118,13 +118,13 @@ namespace PC_assistant.Views
                             {
                                 string digitalProductId = BitConverter.ToString(digitalProductIdBytes).Replace("-", "");
 
-                                string win10ProductName = "Версия Windows 10: " + subKey.GetValue("ProductName") + Environment.NewLine;
+                                string win10ProductName = "Версия Windows: " + subKey.GetValue("ProductName") + Environment.NewLine;
                                 string win10ProductID = "ID продукта: " + subKey.GetValue("ProductID") + Environment.NewLine;
                                 string win10ProductKey = ConvertToKey(digitalProductId);
-                                string productKeyLabel = "Ключ Windows 10: " + win10ProductKey;
+                                string productKeyLabel = "Ключ активации Windows: " + win10ProductKey;
 
                                 string result = win10ProductName + win10ProductID + productKeyLabel;
-                                MessageBox.Show(result, "Ключ активации", MessageBoxButton.OK, MessageBoxImage.Information);
+                                MessageBox.Show(result, "Ключ активации Windows", MessageBoxButton.OK, MessageBoxImage.Information);
                             }
                             else
                             {

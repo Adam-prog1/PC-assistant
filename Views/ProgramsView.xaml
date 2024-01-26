@@ -50,7 +50,7 @@
             </StackPanel>
 
             <ListBox ItemsSource="{Binding InstalledPrograms}" 
-                     Width="500" Height="200" 
+                     Width="500" Height="250" 
                      Margin="0,10,0,20"
                      FontSize="14"
                      Background="#7C80C2"/>

@@ -1,9 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Management;
-using System.Windows;
 
 
 namespace PC_assistant.ViewModels
