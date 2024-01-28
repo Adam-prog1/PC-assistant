@@ -37,8 +37,4 @@
     <SolidColorBrush x:Key="panelOverColor" Color="#281269"/>
     <SolidColorBrush x:Key="panelActiveColor" Color="#2B1372"/>
 
-    <!--Цвета кнопок-->
-    <!--Цвета текстового поля-->
-    <!--И т.д.-->
-
 </ResourceDictionary>

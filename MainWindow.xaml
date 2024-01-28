@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-       xmlns:local="clr-namespace:PC_assistant.Views" 
+        xmlns:local="clr-namespace:PC_assistant.Views" 
         xmlns:viewmodel="clr-namespace:PC_assistant.ViewModels"
-        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" xmlns:local1="clr-namespace:PC_assistant.Views"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp" 
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="1030"
         WindowStartupLocation="CenterScreen"
@@ -78,7 +78,7 @@
 
                         <!--<Image Source="/Images/Logo.png" Height="30"/>-->
                         <fa:IconImage Icon="Keyboard"
-                                      Tag="{StaticResource color1}"
+                                      Foreground="{StaticResource color10}"
                                       Height="30" Width="35"
                                       Margin="5,0,0,0" 
                                       VerticalAlignment="Center"/>
@@ -155,11 +155,12 @@
                     <Grid.RowDefinitions>
                         <!--Панель управления-->
                         <RowDefinition Height="25"/>
-                        <!--Заголовок/Подпись-->
+                        <!--Заголовок-->
                         <RowDefinition Height="35"/>
                         <!--Раздел контента-->
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
+                    
                     <!--Панель управления-->
                     <StackPanel x:Name="pnlControlBar"
                                 Grid.Row="0"
@@ -176,12 +177,14 @@
                                 Click="BtnClose_Click">
                             <fa:IconImage Icon="Xmark" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
+                        
                         <Button x:Name="btnMaximize"
                                 Style="{StaticResource controlButton}"
                                 Tag="{StaticResource color6}"
                                 Click="BtnMaximize_Click">
                             <fa:IconImage Icon="Square" Style="{StaticResource controlButtonIcon}"/>
                         </Button>
+                        
                         <Button x:Name="btnMinimize"
                                 Style="{StaticResource controlButton}"
                                 Tag="{StaticResource color8}"
