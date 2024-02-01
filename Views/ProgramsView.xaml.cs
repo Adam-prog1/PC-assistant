@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using PC_assistant.ViewModels;
 
 namespace PC_assistant.Views
@@ -13,11 +15,19 @@ namespace PC_assistant.Views
     {
         private ProgramsViewModel viewModel;
 
+        // Добавим свойства
+        public ICommand GetInstalledProgramsCommand { get; set; }
+        public IEnumerable InstalledPrograms { get; set; }
+
         public ProgramsView()
         {
             InitializeComponent();
             viewModel = new ProgramsViewModel();
             DataContext = viewModel;
+
+            // Присвоим свойства из viewModel
+            GetInstalledProgramsCommand = viewModel.GetInstalledProgramsCommand;
+            InstalledPrograms = viewModel.InstalledPrograms;
         }
 
         // С асинхроном
@@ -26,7 +36,7 @@ namespace PC_assistant.Views
             await viewModel.GetInstalledProgramsAsync();
         }
 
-        // Без асинхрона
+        ////Без асинхрона
         //private void GetInstalledPrograms_Click(object sender, RoutedEventArgs e)
         //{
         //    viewModel.GetInstalledPrograms(null);
