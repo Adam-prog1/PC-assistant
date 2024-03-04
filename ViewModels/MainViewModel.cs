@@ -1,5 +1,4 @@
-﻿// MainViewModel.cs
-using FontAwesome.Sharp;
+﻿using FontAwesome.Sharp;
 using System.Windows.Input;
 
 namespace PC_assistant.ViewModels
