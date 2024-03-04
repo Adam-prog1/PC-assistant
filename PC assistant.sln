@@ -5,16 +5,20 @@ VisualStudioVersion = 16.0.33214.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PC assistant", "PC assistant.csproj", "{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PC Assistant 0.1", "..\PC Assistant 0.1\PC Assistant 0.1.vdproj", "{1B124B49-9F47-439C-9416-9D9E2C33FAB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{520DE290-EDE7-4F5C-8DAC-6D59ED3C3C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B124B49-9F47-439C-9416-9D9E2C33FAB6}.Debug|Any CPU.ActiveCfg = Debug
+		{1B124B49-9F47-439C-9416-9D9E2C33FAB6}.Release|Any CPU.ActiveCfg = Debug
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
