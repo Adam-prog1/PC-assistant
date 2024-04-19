@@ -66,7 +66,7 @@ namespace PC_assistant.ViewModels
         private void ExecuteShowHomeViewCommand(object obj)
         {
             CurrentChildView = _homeViewModel;
-            Caption = "Home";
+            Caption = "Главная";
             Icon = IconChar.Home;
         }
 
